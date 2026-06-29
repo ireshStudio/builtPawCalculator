@@ -984,5 +984,5 @@ img {
   color-scheme: light;
 }
 
-${Gi.replace(/:root\s*\{/g,`:host {`).replace(/body\s*\{/g,`:host {`)}
+${Gi.replace(/^(\s*):root\s*\{/gm,`$1:host {`).replace(/^(\s*)body\s*\{/gm,`$1:host {`)}
 `}function Yi(){let e=document.currentScript,t=e?.dataset.target;if(t){let e=document.querySelector(t);if(e)return e}let n=e?.previousElementSibling;if(n instanceof HTMLElement&&n.id===Ki)return n;let r=document.getElementById(Ki);if(r)return r;let i=document.createElement(`div`);return i.id=Ki,e?.parentNode?e.parentNode.insertBefore(i,e):document.body.append(i),i}function Xi(){let e=Yi();if(e.getAttribute(qi)===`true`)return;e.setAttribute(qi,`true`);let t=e.shadowRoot??e.attachShadow({mode:`open`}),n=document.createElement(`style`),r=document.createElement(`div`);t.textContent=``,n.textContent=Ji(),r.setAttribute(`part`,`root`),t.append(n,r),yr(Wi,{target:r})}document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,Xi,{once:!0}):Xi()})();
